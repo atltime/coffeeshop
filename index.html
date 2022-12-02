@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+ <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coffeeshop</title>
+  <link rel="shortcut icon" href="assets/images/favicon.ico" />
+  <link rel="icon" href="assets/images/favicon.png" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="assets/js/manage.js" defer></script>
+ </head>
+ <body>
+  <div id="app">
+   <div class="px-4">
+    <!-- header -->
+    <header class="mt-5">
+     <a href="/" class="header-title my-4"><h1>🌝 메뉴 관리</h1></a>
+     <nav>
+      <button data-category-name="espresso" class="btn bg-white m-1">☕ 에스프레소</button>
+      <button data-category-name="frappuccino" class="btn bg-white m-1">🥤 프라푸치노</button>
+      <button data-category-name="blended" class="btn bg-white m-1">🍹 블렌디드</button>
+      <button data-category-name="tea" class="btn bg-white m-1">🫖 티바나</button>
+      <button data-category-name="desert" class="btn bg-white m-1">🍰 디저트</button>
+     </nav>
+    </header>
+
+    <!-- main -->
+    <main class="bg-white mt-10 p-10">
+     <div class="heading d-flex between-center">
+      <h2>☕ 에스프레소 메뉴 관리</h2>
+      <span class="menu-count">총 0개</span>
+     </div>
+     <form id="espress-menu-form">
+      <div class="input-group d-flex my-4">
+       <label for="espresso-menu-name" class="input-label" hidden>메뉴 이름 </label>
+       <input type="text" id="espresso-menu-name" name="espressoMenuName" class="input-filed" placeholder="에스프레소 메뉴 이름" autocomplete="off" />
+       <button type="button" name="submit" id="espresso-menu-submit-button" class="input-submit bg-green-600 text-white ml-2">확인</button>
+      </div>
+     </form>
+     <ul class="espresso-menu-list">
+      <li data-menu-id="0" class="menu-list-item">
+       <span class="menu-name">아메리카노</span>
+       <button type="button" class="menu-soldout-btn">품절</button>
+       <button type="button" class="menu-edit-btn">수정</button>
+       <button type="button" class="menu-remove-btn">삭제</button>
+      </li>
+     </ul>
+    </main>
+   </div>
+  </div>
+ </body>
+</html>
